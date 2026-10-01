@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
+import { AppFooter } from "@/components/footer/app-footer";
 
 const figtree = Figtree({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -31,11 +32,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-[#FBF8FF]">
         <SidebarProvider>
           <AppSidebar />
-          <main>
+          <main className="w-full flex flex-col min-h-svh">
             <SidebarTrigger />
-            <div className="p-4">
+            <div className="px-6 pt-4 flex-1">
               {children}
             </div>
+            <AppFooter />
           </main>
         </SidebarProvider>
       </body>

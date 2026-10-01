@@ -13,15 +13,8 @@ import {
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { CalendarClock, CalendarDays, ChevronDown, ClipboardList, CloudUpload, File, LayoutDashboard, LogOut, Plus, Settings, Trash } from "lucide-react"
+import { CalendarClock, CalendarDays, ClipboardList, CloudUpload, File, LayoutDashboard, LogOut, Plus, Settings, Trash } from "lucide-react"
 import { Field, FieldDescription, FieldLabel } from "../ui/field"
-import { Button } from "../ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 
 export function AppSidebar() {
@@ -61,16 +54,16 @@ export function AppSidebar() {
                         </SidebarMenuItem>
                     </SidebarMenuButton>
                 </SidebarMenu>
+                <SidebarMenuItem>
+                    <SidebarMenuButton className="bg-[#3D50C2] hover:bg-[#576ADD] hover:text-white transition-colors duration-100 text-white h-fit w-full rounded-lg flex align-center justify-center font-semibold text-md py-3 rounded-full">
+                        <CloudUpload /> Unggah Tugas Baru
+                    </SidebarMenuButton>
+                </SidebarMenuItem>
             </SidebarHeader>
             <SidebarContent>
                 <SidebarGroup>
                     <SidebarMenu>
-                        <SidebarMenuItem>
-                            <SidebarMenuButton className="bg-[#3D50C2] hover:bg-[#576ADD] hover:text-white transition-colors duration-100 text-white h-fit w-full rounded-lg flex align-center justify-center font-semibold text-md py-3 rounded-full">
-                                <CloudUpload /> Unggah Tugas Baru
-                            </SidebarMenuButton>
-                        </SidebarMenuItem>
-                        <SidebarMenuItem className="mt-6 flex flex-col gap-2 font-medium">
+                        <SidebarMenuItem className="flex flex-col gap-2 font-medium">
                             <SidebarMenuButton className="text-md hover:bg-[#576ADD] hover:text-white transition-colors duration-200 px-4 py-3 rounded-sm">
                                 <LayoutDashboard /> Dashboard
                             </SidebarMenuButton>
