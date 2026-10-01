@@ -16,6 +16,12 @@ coverage/
 *.tsbuildinfo
 apps/web/next-env.d.ts
 
+# Prisma
+apps/api/prisma/migrations/dev.db
+apps/api/prisma/migrations/dev.db-journal
+*.db
+*.db-journal
+
 .env
 !.env.example
 .vercel/
