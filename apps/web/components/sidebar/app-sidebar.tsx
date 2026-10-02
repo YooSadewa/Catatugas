@@ -16,6 +16,7 @@ import {
 import { CalendarClock, CalendarDays, ClipboardList, CloudUpload, File, LayoutDashboard, LogOut, Plus, Settings, Trash } from "lucide-react"
 import { Field, FieldDescription, FieldLabel } from "../ui/field"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
+import Link from "next/link"
 
 export function AppSidebar() {
     return (
@@ -64,12 +65,16 @@ export function AppSidebar() {
                 <SidebarGroup>
                     <SidebarMenu>
                         <SidebarMenuItem className="flex flex-col gap-2 font-medium">
-                            <SidebarMenuButton className="text-md hover:bg-[#576ADD] hover:text-white transition-colors duration-200 px-4 py-3 rounded-sm">
-                                <LayoutDashboard /> Dashboard
-                            </SidebarMenuButton>
-                            <SidebarMenuButton className="text-md hover:bg-[#576ADD] hover:text-white transition-colors duration-200 px-4 py-3 rounded-sm">
-                                <ClipboardList /> Tugas Kuliah
-                            </SidebarMenuButton>
+                            <Link href={"/"} className="w-full">
+                                <SidebarMenuButton className="text-md hover:bg-[#576ADD] hover:text-white transition-colors duration-200 px-4 py-3 rounded-sm">
+                                    <LayoutDashboard /> Dashboard
+                                </SidebarMenuButton>
+                            </Link>
+                            <Link href={"/tugas-kuliah"} className="w-full">
+                                <SidebarMenuButton className="text-md hover:bg-[#576ADD] hover:text-white transition-colors duration-200 px-4 py-3 rounded-sm w-full">
+                                    <ClipboardList /> Tugas Kuliah
+                                </SidebarMenuButton>
+                            </Link>
                             <SidebarMenuButton className="text-md hover:bg-[#576ADD] hover:text-white transition-colors duration-200 px-4 py-3 rounded-sm">
                                 <CalendarDays /> Rencana Akhir Pekan
                             </SidebarMenuButton>
